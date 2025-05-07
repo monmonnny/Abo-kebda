@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المفاجأة</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Cairo', sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-top: 20%;
+      color: pink;
+    }
+
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: float 6s infinite ease-in;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: inherit;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {transform: translateY(100vh) rotate(45deg);}
+      100% {transform: translateY(-10vh) rotate(45deg);}
+    }
+
+    .star {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: gold;
+      color: black;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 12px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts">
+    <div class="heart" style="left:10%; animation-delay: 0s;"></div>
+    <div class="heart" style="left:30%; animation-delay: 1s;"></div>
+    <div class="heart" style="left:50%; animation-delay: 2s;"></div>
+    <div class="heart" style="left:70%; animation-delay: 3s;"></div>
+    <div class="heart" style="left:90%; animation-delay: 4s;"></div>
+  </div>
+
+  <h1>ازيك يا كبدة وحشتني</h1>
+  <a href="surprise.html" class="star">اضغط هنا</a>
+</body>
+</html>
